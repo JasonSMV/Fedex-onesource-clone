@@ -50,12 +50,20 @@ html {
 }
 
 body {
-  max-width: 130rem;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
-.container {
-  padding: 2.4rem;
+.main-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.caller-section {
+}
+
+.caller-section .card {
+  height: 100%;
 }
 
 .card {
@@ -68,19 +76,24 @@ body {
   font-weight: bold;
 }
 
+.card-body {
+  border-bottom: none;
+}
+
 .grid {
   max-width: 100%;
   display: grid;
 
-  grid-template-columns: max-content 30rem max-content 30rem min-content;
+  grid-template-columns: max-content 1fr max-content 1fr min-content;
   grid-auto-rows: 3rem;
-  column-gap: 2.4rem;
+  column-gap: 0.6rem;
   row-gap: 0.6rem;
 }
 
 .Logo {
   width: 9.6rem;
   height: auto;
+  margin-bottom: 1.2rem;
 }
 
 .form-control {
@@ -124,4 +137,61 @@ body {
   right: 10px;
   bottom: 10px;
   border-radius: 2px;
+}
+
+.full-screen {
+  border-width: 0;
+  max-width: 100%;
+  height: 100vh;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+  display: block;
+}
+
+.status-section {
+}
+
+.card-body {
+  font-size: 1.4rem;
+  border: none;
+}
+
+.cti-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: start;
+  align-items: center;
+  column-gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.span-3 {
+  grid-column: span 3;
+}
+
+.span-full-width {
+  grid-column: 1 / -1;
+}
+
+.ani-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.blue-square {
+  display: inline-block;
+  color: blue;
+  background-color: blue;
+  padding: 1.2rem;
 }
